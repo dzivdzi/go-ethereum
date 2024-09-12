@@ -9,8 +9,7 @@ on:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'CI:Build')
-    runs-on: ubuntu-latest    # Change this to use GitHub-hosted runner
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
